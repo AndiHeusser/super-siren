@@ -1,20 +1,20 @@
 import SirenLink from '../lib/SirenLink';
 import {expect} from 'chai';
 import Chance from 'Chance';
-var chance = new Chance();
+let chance = new Chance();
 
 describe('SirenLink', () => {
 	describe('Constructor', () => {
 		describe('When constructing a SirenLink with rels/href/classes', () => {
-			var rels;
-			var href;
-			var link;
-			var classes;
+			let rels;
+			let href;
+			let link;
+			let classes;
 
 			beforeEach(() => {
 				rels = ['a', 'b'];
 				href = 'http://blah.com';
-				classes = [chance.string(), chance.string()]
+				classes = [chance.string(), chance.string()];
 
 				link = new SirenLink(rels, href, classes);
 			});
